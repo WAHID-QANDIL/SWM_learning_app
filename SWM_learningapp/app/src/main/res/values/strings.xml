@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">SWM_learning app</string>
+    <string name="app_name">ModernLogin</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+
+    <!--for facebook login-->
+
+    <!--facebook login ends-->
+
+    <!--error messages-->
+
 </resources>

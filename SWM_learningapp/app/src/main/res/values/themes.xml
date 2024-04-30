@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.SWM_learningApp" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Mobile_project" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.SWM_learningApp" parent="Base.Theme.SWM_learningApp" />
+    <style name="Theme.Mobile_project" parent="Base.Theme.Mobile_project" />
 </resources>
