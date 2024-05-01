@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="main_activity.splashscreen" parent="Theme.SplashScreen">
+        <item name="postSplashScreenTheme">@style/AppTheme</item>
+        <item name="android:windowSplashScreenBackground">@color/colorAccent</item>
+        <item name="android:windowSplashScreenAnimationDuration">1000</item>
+
+    </style>
+</resources>
