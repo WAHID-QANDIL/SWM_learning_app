@@ -1,12 +1,29 @@
 <resources>
-    <string name="app_name">ModernLogin</string>
+    <string name="app_name">SWM_learning app</string>
+    <string name="already_nhave_an_naccount">Already \nhave an \nAccount?</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="new_user_register_now">New user? Register Now</string>
+    <string name="login">Login</string>
+    <string name="use_other_methods">Use other Methods</string>
+    <string name="login_icon">login Icon</string>
     <string name="login_email_hint">Email</string>
     <string name="login_password_hint">Password</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="nav_button">NavButton</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="name">Name</string>
+    <string name="screen_main_text_lable">Here’s\nyour first\nstep with \nus!</string>
+    <string name="register_nav_image_view">register_nav_image_view</string>
+    <string name="register_image_icon">register_image_icon</string>
 
-    <!--for facebook login-->
+    <!--colors for crop activity-->
+    <!--<color name="ucrop_color_toolbar">@color/teal_500</color>-->
+    <!--<color name="ucrop_color_statusbar">@color/teal_700</color>-->
+    <!--<color name="ucrop_color_widget_active">@color/teal_500</color>-->
 
-    <!--facebook login ends-->
-
-    <!--error messages-->
 
 </resources>
