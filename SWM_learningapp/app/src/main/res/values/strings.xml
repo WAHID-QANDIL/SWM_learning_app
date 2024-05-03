@@ -19,6 +19,16 @@
     <string name="screen_main_text_lable">Here’s\nyour first\nstep with \nus!</string>
     <string name="register_nav_image_view">register_nav_image_view</string>
     <string name="register_image_icon">register_image_icon</string>
+    <string name="notes">Notes</string>
+    <string name="student_notes">Student notes</string>
+    <string name="bromodoroimage">BromodoroImage</string>
+    <string name="bromodoro">Bromodoro</string>
+    <string name="settenings">Settenings</string>
+    <string name="home">Home</string>
+    <string name="study_from_a_to_z">Study from A to Z</string>
+    <string name="setteningsimage">setteningsImage</string>
+    <string name="studentimage">StudentImage</string>
+    <string name="student">Student</string>
 
     <!--colors for crop activity-->
     <!--<color name="ucrop_color_toolbar">@color/teal_500</color>-->

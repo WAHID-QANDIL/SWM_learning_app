@@ -1,5 +1,7 @@
 package com.dtu.swm_learningapp;
 
+import static androidx.core.app.PendingIntentCompat.getActivity;
+
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
@@ -9,9 +11,11 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.view.animation.AnticipateInterpolator;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
@@ -38,7 +42,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ImageView nav_register_imageview = findViewById(R.id.nav_register_imageview);
         registerTextView.setOnClickListener(this);
         nav_register_imageview.setOnClickListener(this);
-
+        Button loginButton = findViewById(R.id.login_button);
+        loginButton.setOnClickListener(this);
     }
 
     @Override
@@ -56,6 +61,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         } else if (id == R.id.nav_button || id == R.id.already_have_account_textview) {
             fragmentManager.popBackStack();
+//            FrameLayout loginFrame = findViewById(R.id.login_frame_container);
+//            loginFrame.setVisibility(View.GONE);
 
 
 
@@ -64,9 +71,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                    .setCustomAnimations(R.anim.slide_in_left,R.anim.slide_in_right)
 //                    .addToBackStack(null)
 //                    .commit();
-        }
-        //
+        } else if (id == R.id.login_button) {
+//            FrameLayout loginFrame = findViewById(R.id.login_frame_container);
+//            loginFrame.setVisibility(View.GONE);
 
+            Toast.makeText(this, "Login", Toast.LENGTH_SHORT).show();
+
+        }
     }
 
 
