@@ -56,6 +56,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         } else if (id == R.id.nav_button || id == R.id.already_have_account_textview) {
             fragmentManager.popBackStack();
+
+
+
 //            fragmentManager.beginTransaction()
 //                    .replace(R.id.login_frame_container,new LoginFragment())
 //                    .setCustomAnimations(R.anim.slide_in_left,R.anim.slide_in_right)

@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/login_bk_color">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

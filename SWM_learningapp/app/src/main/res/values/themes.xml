@@ -20,5 +20,6 @@
                 <item name="android:statusBarColor">@color/colorAccent</item>
                 <item name="android:navigationBarColor">@color/colorAccent</item>
                 <item name="backgroundColor">@color/colorAccent</item>
+                <item name="android:windowBackground">@drawable/lunch_background</item>
     </style>
 </resources>

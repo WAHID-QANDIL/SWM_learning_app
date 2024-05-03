@@ -22,7 +22,9 @@
         <!-- Main activity -->
         <activity
             android:name="com.dtu.swm_learningapp.MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/main_activity.splashscreen"
+            >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
