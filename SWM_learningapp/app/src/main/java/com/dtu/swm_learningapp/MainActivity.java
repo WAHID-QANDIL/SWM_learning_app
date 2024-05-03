@@ -6,6 +6,7 @@ import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.view.animation.AnticipateInterpolator;
 import android.widget.FrameLayout;
@@ -17,6 +18,7 @@ import androidx.core.splashscreen.SplashScreen;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.transition.Slide;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -53,7 +55,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .commit();
             return;
         } else if (id == R.id.nav_button || id == R.id.already_have_account_textview) {
-
             fragmentManager.popBackStack();
 //            fragmentManager.beginTransaction()
 //                    .replace(R.id.login_frame_container,new LoginFragment())
