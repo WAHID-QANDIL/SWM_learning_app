@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,22 +15,31 @@ import android.widget.Toast;
 
 import com.dtu.swm_learningapp.databinding.FragmentRegisterFragmentBinding;
 import com.dtu.swm_learningapp.util.Validation;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class RegisterFragment extends Fragment implements View.OnClickListener {
+    public static final String TAG = "TAG";
     //creating an object from the xml FragmentRegisterFragmentBinding file to use
     private FragmentRegisterFragmentBinding binding;
     //creating a firebase variable
     FirebaseAuth fAuth;
-
-
+    FirebaseFirestore fStore;
+    String userId;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         fAuth = FirebaseAuth.getInstance();
-
+        fStore=FirebaseFirestore.getInstance();
     }
 
     @Override
@@ -72,7 +82,12 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
             fAuth.createUserWithEmailAndPassword(binding.etEmail.getText().toString().trim(),
                     binding.etPass.getText().toString().trim()).addOnCompleteListener( task -> {
                         if( task.isSuccessful()){
-                            Toast.makeText( getContext(),"successfully add",Toast.LENGTH_SHORT).show();
+                            //Toast.makeText( getContext(),"successfully add",Toast.LENGTH_SHORT).show();
+                            userId = fAuth.getCurrentUser().getUid();
+                            //Toast.makeText( getContext(),"here1",Toast.LENGTH_SHORT).show();
+                            preparingData(name,email,pass,mobNum);
+
+
                             Navigation.findNavController(v).navigate(R.id.action_registerFragment_to_homeFragment);
                         }
                         else Toast.makeText( getContext(),"error"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
@@ -80,6 +95,25 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
             });
 
         }
+    }
+    public void preparingData(String name,String email,String pass,String mobNum){
+
+        Map<String, Object>user=new HashMap<>();
+        user.put("name",name);
+        user.put("email",email);
+        user.put("pass",pass);
+        user.put("mobile number",mobNum);
+
+
+        DocumentReference documentReference = fStore.collection("users").document(userId);
+        Toast.makeText( getContext(),"here3",Toast.LENGTH_SHORT).show();
+        documentReference.set(user).addOnSuccessListener(unused -> {
+           Log.d(TAG,"succeed :user profile is created for "+userId);
+        }).addOnFailureListener(e -> {
+            Log.d(TAG,"on failure "+e.toString());
+        });
+
+
     }
     //checking for all validation
     public boolean isValid( String name, String email, String pass,String mobNum) {

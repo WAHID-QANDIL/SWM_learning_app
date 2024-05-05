@@ -4,7 +4,7 @@
             "outputFile": "com.dtu.swm_learningapp-mergeDebugResources-50:/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\309bd4b049d4042713020c1407ac61bc\\transformed\\appcompat-1.6.1\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\3a704fc1ff420a8bcf5a5a64c42ca0dc\\transformed\\appcompat-1.6.1\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\c706cb143d8c760a8b3ab0fd9fad7f0d\\transformed\\material-1.11.0\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\74987b88686827063f7636c3f0169e2e\\transformed\\material-1.11.0\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,26,35,40",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

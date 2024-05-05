@@ -4,7 +4,7 @@
             "outputFile": "com.dtu.swm_learningapp-mergeDebugResources-50:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\a3ee9d5db48cc59a8c4b1f9983c3e6e9\\transformed\\core-splashscreen-1.0.1\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\9ff40f6af61940bffb6021f274f5d5ff\\transformed\\core-splashscreen-1.0.1\\res\\values-watch-v20\\values-watch-v20.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\c643d9b9982917dd96a1e92898478bad\\transformed\\play-services-auth-20.7.0\\res\\values-watch-v20\\values.xml",
+                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\6c53e2af3ae95782b708d790f042e798\\transformed\\play-services-auth-20.7.0\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\309bd4b049d4042713020c1407ac61bc\\transformed\\appcompat-1.6.1\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\3a704fc1ff420a8bcf5a5a64c42ca0dc\\transformed\\appcompat-1.6.1\\res\\values-watch-v20\\values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

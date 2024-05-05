@@ -48,7 +48,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         binding.tRegister.setOnClickListener(this);
         binding.navController.setOnClickListener(this);
         if (fAuth.getCurrentUser() != null) {
-            Navigation.findNavController(requireView()).navigate(R.id.action_loginFragment_to_homeFragment);
+            //Navigation.findNavController(requireView()).navigate(R.id.action_loginFragment_to_homeFragment);
         }
     }
 
