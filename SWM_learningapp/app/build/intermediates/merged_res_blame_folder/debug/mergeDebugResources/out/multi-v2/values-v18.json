@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.dtu.swm_learningapp-mergeDebugResources-38:/values-v18/values-v18.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\325fa364dc876319aedd5ab01bebd21c\\transformed\\appcompat-1.6.1\\res\\values-v18\\values-v18.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        }
+    ]
+}

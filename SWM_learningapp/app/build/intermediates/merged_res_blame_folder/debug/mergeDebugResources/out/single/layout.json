@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\Users\\SOFT\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-mergeDebugResources-39:\\layout\\fragment_register_fragment.xml",
+        "source": "C:\\Users\\SOFT\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-42:\\layout\\fragment_register_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\SOFT\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-mergeDebugResources-39:\\layout\\activity_register.xml",
+        "source": "C:\\Users\\SOFT\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-42:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\SOFT\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-mergeDebugResources-39:\\layout\\toolbar.xml",
+        "source": "C:\\Users\\SOFT\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-42:\\layout\\toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\SOFT\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-mergeDebugResources-39:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\SOFT\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-42:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "com.dtu.swm_learningapp-mergeDebugResources-39:/layout/fragment_register_fragment.xml",
+        "source": "com.dtu.swm_learningapp-main-42:/layout/fragment_register_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\SOFT\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-mergeDebugResources-39:\\layout\\fragment_login.xml",
+        "source": "C:\\Users\\SOFT\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-42:\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\SOFT\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-mergeDebugResources-39:\\layout\\activity_home.xml",
+        "source": "C:\\Users\\SOFT\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-42:\\layout\\activity_home.xml"
+    }
+]
