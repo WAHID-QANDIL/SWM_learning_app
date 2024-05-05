@@ -24,8 +24,5 @@ public class HomeActivity extends AppCompatActivity {
         assert actionBar != null;
         actionBar.setDisplayHomeAsUpEnabled(true);
         setTitle(R.string.home);
-
-
-
     }
 }

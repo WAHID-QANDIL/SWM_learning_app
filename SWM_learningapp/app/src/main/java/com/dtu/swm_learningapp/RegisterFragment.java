@@ -1,81 +1,104 @@
 package com.dtu.swm_learningapp;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link RegisterFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class RegisterFragment extends Fragment {
+import com.dtu.swm_learningapp.databinding.FragmentRegisterFragmentBinding;
+import com.dtu.swm_learningapp.util.Validation;
+import com.google.firebase.auth.FirebaseAuth;
 
-    private Listener listener;
 
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-    }
+public class RegisterFragment extends Fragment implements View.OnClickListener {
+    //creating an object from the xml FragmentRegisterFragmentBinding file to use
+    private FragmentRegisterFragmentBinding binding;
+    //creating a firebase variable
+    FirebaseAuth fAuth;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public RegisterFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Register_fragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static RegisterFragment newInstance(String param1, String param2) {
-        RegisterFragment fragment = new RegisterFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+        fAuth = FirebaseAuth.getInstance();
+        if(fAuth.getCurrentUser()!=null){
+            //going to home activity if hes signed in     i think well its not working so
+            //startActivity(new Intent(getContext(),HomeActivity.class));
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register_fragment, container, false);
+        // Inflate the layout for this fragment with the binding object
+        binding = FragmentRegisterFragmentBinding.inflate(inflater, container, false);
+        return binding.getRoot();
+
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
+        //setting a on click listener when pressing on the register button
+        binding.btRegister.setOnClickListener(this);
+
+
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        //checking for all validation
+        String email = binding.etEmail.getText().toString();
+        String pass = binding.etPass.getText().toString();
+        String name = binding.etName.getText().toString();
+        String mobNum = binding.etMobNumber.getText().toString();
+
+        if (v.getId() == binding.btRegister.getId() && isValid(name, email, pass, mobNum)) {
+
+            //creating a user profile
+            fAuth.createUserWithEmailAndPassword(binding.etEmail.getText().toString().trim(),
+                    binding.etPass.getText().toString().trim()).addOnCompleteListener(task -> {
+                        if(task.isSuccessful()){
+                            Toast.makeText(getContext(),"successfully add",Toast.LENGTH_SHORT).show();
+                            //going to home activity    i think well its not working so
+                            //startActivity(new Intent(getContext(),HomeActivity.class));
+                        }
+                        else Toast.makeText(getContext(),"error"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+
+            });
+
+        }
+    }
+
+    public boolean isValid(String name, String email, String pass,String mobNum) {
+        if(!Validation.nameIsValid(name)){
+            binding.etName.setError("name is not valid");
+            return false;
+        }
+
+        if(!Validation.emailIsValid(email)){
+            binding.etEmail.setError("email is not correctly formatted");
+            return false;
+        }
+        if(!Validation.passIsValid(pass)){
+            binding.etPass.setError("password is not valid");
+            return false;
+        }
+        if(!Validation.moblieNumberIsValid(mobNum)){
+            binding.etMobNumber.setError("mobile number is not valid");
+            return false;
+        }
+
+        return true;
+    }
 
 }

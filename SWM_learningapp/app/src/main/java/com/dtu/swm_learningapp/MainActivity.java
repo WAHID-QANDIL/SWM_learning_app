@@ -105,16 +105,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 slideUp.start();
             });
-
-
-
-
         }
         else {
             setTheme(R.style.AppTheme);
         }
-
     }
-
-
 }

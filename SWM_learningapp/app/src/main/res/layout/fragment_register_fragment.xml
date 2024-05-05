@@ -61,7 +61,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/editTextName"
+                        android:id="@+id/et_name"
                         style="@style/modifiedEditText"
                         android:hint="@string/name"
                         android:inputType="textPersonName"
@@ -70,15 +70,21 @@
 
 
                     <EditText
-                        android:id="@+id/register_editTextEmail"
+                        android:id="@+id/et_email"
                         style="@style/modifiedEditText"
                         android:hint="@string/login_email_hint"
                         android:inputType="textEmailAddress"
                         android:maxLines="1"
                         android:autofillHints="Email" />
-
                     <EditText
-                        android:id="@+id/register_editTextMobile"
+                        android:id="@+id/et_pass"
+                        style="@style/modifiedEditText"
+                        android:hint="@string/login_password_hint"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:autofillHints="Password" />
+                    <EditText
+                        android:id="@+id/et_mobNumber"
                         style="@style/modifiedEditText"
                         android:hint="@string/mobile_number"
                         android:inputType="phone"
@@ -86,16 +92,10 @@
                         android:autofillHints="Phone" />
 
 
-                    <EditText
-                        android:id="@+id/register_editTextPassword"
-                        style="@style/modifiedEditText"
-                        android:hint="@string/login_password_hint"
-                        android:inputType="textPassword"
-                        android:maxLines="1"
-                        android:autofillHints="Password" />
+
 
                     <Button
-                        android:id="@+id/register_button"
+                        android:id="@+id/bt_register"
                         style="@style/loginButton"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/loginViewsMargin"

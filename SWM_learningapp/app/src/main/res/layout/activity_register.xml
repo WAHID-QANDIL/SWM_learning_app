@@ -103,7 +103,6 @@
                     <TextView
                         style="@style/parent"
                         android:layout_marginTop="@dimen/loginViewsMargin"
-                        android:onClick="onLoginClick"
                         android:text="Already have an account?"
                         android:textAlignment="center"
                         android:textColor="@color/colorAccent"
