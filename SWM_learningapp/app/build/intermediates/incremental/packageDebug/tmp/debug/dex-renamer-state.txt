@@ -1,4 +1,4 @@
-#Sun May 05 18:59:09 EEST 2024
+#Sun May 05 22:21:44 EEST 2024
 base.0=C\:\\Users\\SOFT\\Desktop\\SWM_learning_app\\SWM_learningapp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\SOFT\\Desktop\\SWM_learning_app\\SWM_learningapp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\SOFT\\Desktop\\SWM_learning_app\\SWM_learningapp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.dtu.swm_learningapp-mergeDebugResources-38:/values-large-v4/values-large-v4.xml",
+            "outputFile": "com.dtu.swm_learningapp-mergeDebugResources-50:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\d7dc07454fb77d111304b6b267bccd75\\transformed\\material-1.11.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\c706cb143d8c760a8b3ab0fd9fad7f0d\\transformed\\material-1.11.0\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\325fa364dc876319aedd5ab01bebd21c\\transformed\\appcompat-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\309bd4b049d4042713020c1407ac61bc\\transformed\\appcompat-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

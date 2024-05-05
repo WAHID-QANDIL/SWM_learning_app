@@ -24,13 +24,13 @@ public final class FragmentLoginBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
-  public final Button loginButton;
+  public final Button btLogin;
 
   @NonNull
-  public final EditText loginEditTextEmail;
+  public final EditText etEmail;
 
   @NonNull
-  public final EditText loginEditTextPassword;
+  public final EditText etPass;
 
   @NonNull
   public final TextView loginForgetPassword;
@@ -39,10 +39,10 @@ public final class FragmentLoginBinding implements ViewBinding {
   public final FrameLayout loginFrameContainer;
 
   @NonNull
-  public final TextView loginRegisterTextview;
+  public final ImageView navController;
 
   @NonNull
-  public final ImageView navRegisterImageview;
+  public final TextView tRegister;
 
   @NonNull
   public final TextInputLayout textInputEmail;
@@ -50,19 +50,19 @@ public final class FragmentLoginBinding implements ViewBinding {
   @NonNull
   public final TextInputLayout textInputPassword;
 
-  private FragmentLoginBinding(@NonNull FrameLayout rootView, @NonNull Button loginButton,
-      @NonNull EditText loginEditTextEmail, @NonNull EditText loginEditTextPassword,
-      @NonNull TextView loginForgetPassword, @NonNull FrameLayout loginFrameContainer,
-      @NonNull TextView loginRegisterTextview, @NonNull ImageView navRegisterImageview,
-      @NonNull TextInputLayout textInputEmail, @NonNull TextInputLayout textInputPassword) {
+  private FragmentLoginBinding(@NonNull FrameLayout rootView, @NonNull Button btLogin,
+      @NonNull EditText etEmail, @NonNull EditText etPass, @NonNull TextView loginForgetPassword,
+      @NonNull FrameLayout loginFrameContainer, @NonNull ImageView navController,
+      @NonNull TextView tRegister, @NonNull TextInputLayout textInputEmail,
+      @NonNull TextInputLayout textInputPassword) {
     this.rootView = rootView;
-    this.loginButton = loginButton;
-    this.loginEditTextEmail = loginEditTextEmail;
-    this.loginEditTextPassword = loginEditTextPassword;
+    this.btLogin = btLogin;
+    this.etEmail = etEmail;
+    this.etPass = etPass;
     this.loginForgetPassword = loginForgetPassword;
     this.loginFrameContainer = loginFrameContainer;
-    this.loginRegisterTextview = loginRegisterTextview;
-    this.navRegisterImageview = navRegisterImageview;
+    this.navController = navController;
+    this.tRegister = tRegister;
     this.textInputEmail = textInputEmail;
     this.textInputPassword = textInputPassword;
   }
@@ -94,21 +94,21 @@ public final class FragmentLoginBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.login_button;
-      Button loginButton = ViewBindings.findChildViewById(rootView, id);
-      if (loginButton == null) {
+      id = R.id.bt_login;
+      Button btLogin = ViewBindings.findChildViewById(rootView, id);
+      if (btLogin == null) {
         break missingId;
       }
 
-      id = R.id.login_editTextEmail;
-      EditText loginEditTextEmail = ViewBindings.findChildViewById(rootView, id);
-      if (loginEditTextEmail == null) {
+      id = R.id.etEmail;
+      EditText etEmail = ViewBindings.findChildViewById(rootView, id);
+      if (etEmail == null) {
         break missingId;
       }
 
-      id = R.id.login_editTextPassword;
-      EditText loginEditTextPassword = ViewBindings.findChildViewById(rootView, id);
-      if (loginEditTextPassword == null) {
+      id = R.id.etPass;
+      EditText etPass = ViewBindings.findChildViewById(rootView, id);
+      if (etPass == null) {
         break missingId;
       }
 
@@ -120,15 +120,15 @@ public final class FragmentLoginBinding implements ViewBinding {
 
       FrameLayout loginFrameContainer = (FrameLayout) rootView;
 
-      id = R.id.login_register_textview;
-      TextView loginRegisterTextview = ViewBindings.findChildViewById(rootView, id);
-      if (loginRegisterTextview == null) {
+      id = R.id.nav_controller;
+      ImageView navController = ViewBindings.findChildViewById(rootView, id);
+      if (navController == null) {
         break missingId;
       }
 
-      id = R.id.nav_register_imageview;
-      ImageView navRegisterImageview = ViewBindings.findChildViewById(rootView, id);
-      if (navRegisterImageview == null) {
+      id = R.id.t_register;
+      TextView tRegister = ViewBindings.findChildViewById(rootView, id);
+      if (tRegister == null) {
         break missingId;
       }
 
@@ -144,9 +144,9 @@ public final class FragmentLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentLoginBinding((FrameLayout) rootView, loginButton, loginEditTextEmail,
-          loginEditTextPassword, loginForgetPassword, loginFrameContainer, loginRegisterTextview,
-          navRegisterImageview, textInputEmail, textInputPassword);
+      return new FragmentLoginBinding((FrameLayout) rootView, btLogin, etEmail, etPass,
+          loginForgetPassword, loginFrameContainer, navController, tRegister, textInputEmail,
+          textInputPassword);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

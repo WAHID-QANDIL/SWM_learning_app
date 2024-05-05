@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.dtu.swm_learningapp-mergeDebugResources-38:/values-v29/values-v29.xml",
+            "outputFile": "com.dtu.swm_learningapp-mergeDebugResources-50:/values-v29/values-v29.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\244dffa18cf917d3bffae976349c36c5\\transformed\\core-splashscreen-1.0.1\\res\\values-v29\\values-v29.xml",
+                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\a3ee9d5db48cc59a8c4b1f9983c3e6e9\\transformed\\core-splashscreen-1.0.1\\res\\values-v29\\values-v29.xml",
                     "from": {
                         "startLines": "2,7",
                         "startColumns": "4,4",

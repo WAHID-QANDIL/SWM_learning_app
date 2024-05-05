@@ -23,9 +23,6 @@ public final class FragmentRegisterFragmentBinding implements ViewBinding {
   private final RelativeLayout rootView;
 
   @NonNull
-  public final TextView alreadyHaveAccountTextview;
-
-  @NonNull
   public final Button btRegister;
 
   @NonNull
@@ -41,25 +38,27 @@ public final class FragmentRegisterFragmentBinding implements ViewBinding {
   public final EditText etPass;
 
   @NonNull
-  public final ImageView navButton;
+  public final ImageView navController;
 
   @NonNull
   public final RelativeLayout registerFragment;
 
+  @NonNull
+  public final TextView tLogin;
+
   private FragmentRegisterFragmentBinding(@NonNull RelativeLayout rootView,
-      @NonNull TextView alreadyHaveAccountTextview, @NonNull Button btRegister,
-      @NonNull EditText etEmail, @NonNull EditText etMobNumber, @NonNull EditText etName,
-      @NonNull EditText etPass, @NonNull ImageView navButton,
-      @NonNull RelativeLayout registerFragment) {
+      @NonNull Button btRegister, @NonNull EditText etEmail, @NonNull EditText etMobNumber,
+      @NonNull EditText etName, @NonNull EditText etPass, @NonNull ImageView navController,
+      @NonNull RelativeLayout registerFragment, @NonNull TextView tLogin) {
     this.rootView = rootView;
-    this.alreadyHaveAccountTextview = alreadyHaveAccountTextview;
     this.btRegister = btRegister;
     this.etEmail = etEmail;
     this.etMobNumber = etMobNumber;
     this.etName = etName;
     this.etPass = etPass;
-    this.navButton = navButton;
+    this.navController = navController;
     this.registerFragment = registerFragment;
+    this.tLogin = tLogin;
   }
 
   @Override
@@ -89,12 +88,6 @@ public final class FragmentRegisterFragmentBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.already_have_account_textview;
-      TextView alreadyHaveAccountTextview = ViewBindings.findChildViewById(rootView, id);
-      if (alreadyHaveAccountTextview == null) {
-        break missingId;
-      }
-
       id = R.id.bt_register;
       Button btRegister = ViewBindings.findChildViewById(rootView, id);
       if (btRegister == null) {
@@ -125,17 +118,22 @@ public final class FragmentRegisterFragmentBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.nav_button;
-      ImageView navButton = ViewBindings.findChildViewById(rootView, id);
-      if (navButton == null) {
+      id = R.id.nav_controller;
+      ImageView navController = ViewBindings.findChildViewById(rootView, id);
+      if (navController == null) {
         break missingId;
       }
 
       RelativeLayout registerFragment = (RelativeLayout) rootView;
 
-      return new FragmentRegisterFragmentBinding((RelativeLayout) rootView,
-          alreadyHaveAccountTextview, btRegister, etEmail, etMobNumber, etName, etPass, navButton,
-          registerFragment);
+      id = R.id.t_login;
+      TextView tLogin = ViewBindings.findChildViewById(rootView, id);
+      if (tLogin == null) {
+        break missingId;
+      }
+
+      return new FragmentRegisterFragmentBinding((RelativeLayout) rootView, btRegister, etEmail,
+          etMobNumber, etName, etPass, navController, registerFragment, tLogin);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -11,6 +11,8 @@ constraintlayout = "2.1.4"
 coordinatorlayout = "1.2.0"
 googleServices = "4.4.1"
 firebaseAuth = "23.0.0"
+navigationFragment = "2.7.7"
+navigationUi = "2.7.7"
 
 [libraries]
 core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
@@ -24,6 +26,8 @@ constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayo
 coordinatorlayout = { group = "androidx.coordinatorlayout", name = "coordinatorlayout", version.ref = "coordinatorlayout" }
 google-services = { group = "com.google.gms", name = "google-services", version.ref = "googleServices" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
+navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
+navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationUi" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

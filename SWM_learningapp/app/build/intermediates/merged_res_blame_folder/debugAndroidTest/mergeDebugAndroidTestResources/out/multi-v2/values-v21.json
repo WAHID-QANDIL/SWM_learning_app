@@ -4,7 +4,7 @@
             "outputFile": "com.dtu.swm_learningapp.test.app-mergeDebugAndroidTestResources-3:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\c9a75ebf6f15e91b7d5a49c36ea315cc\\transformed\\core-1.5.0\\res\\values-v21\\values.xml",
+                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\a7463ccf79cedf3f248452d3ed187ac1\\transformed\\core-1.5.0\\res\\values-v21\\values.xml",
                     "from": {
                         "startLines": "4,13",
                         "startColumns": "0,0",

@@ -52,7 +52,7 @@
                     style="@style/parent"
                     android:layout_marginTop="@dimen/loginViewsMargin">
                     <EditText
-                        android:id="@+id/login_editTextEmail"
+                        android:id="@+id/etEmail"
                         style="@style/modifiedEditText"
                         android:inputType="textEmailAddress"
                         android:maxLines="1"
@@ -65,7 +65,7 @@
                     style="@style/parent"
                     android:layout_marginTop="@dimen/loginViewsMargin">
                     <EditText
-                        android:id="@+id/login_editTextPassword"
+                        android:id="@+id/etPass"
                         style="@style/modifiedEditText"
                         android:hint="@string/login_password_hint"
                         android:maxLines="1"
@@ -84,7 +84,7 @@
 
 
                 <Button
-                    android:id="@+id/login_button"
+                    android:id="@+id/bt_login"
                     style="@style/loginButton"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="@dimen/loginViewsMargin"
@@ -92,7 +92,7 @@
 
 
                 <TextView
-                    android:id="@+id/login_register_textview"
+                    android:id="@+id/t_register"
                     style="@style/parent"
                     android:layout_marginTop="@dimen/loginViewsMargin"
                     android:text="@string/new_user_register_now"
@@ -173,7 +173,7 @@
             android:background="@drawable/ic_side_bg" />
 
         <ImageView
-            android:id="@+id/nav_register_imageview"
+            android:id="@+id/nav_controller"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
