@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/login_frame_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/login_bk_color"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:layout_gravity="center">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:paddingTop="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <RelativeLayout
+                    android:layout_width="285dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/viewParent.headerText.NoMode"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/already_nhave_an_naccount" />
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="300dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="-9dp"
+                        android:layout_marginBottom="0dp"
+                        android:src="@drawable/ic__1_"
+                        android:contentDescription="@string/login_icon" />
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputEmail"
+                    style="@style/parent"
+                    android:layout_marginTop="@dimen/loginViewsMargin">
+                    <EditText
+                        android:id="@+id/etEmail"
+                        style="@style/modifiedEditText"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:hint="@string/login_email_hint"
+                        android:autofillHints="emailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputPassword"
+                    style="@style/parent"
+                    android:layout_marginTop="@dimen/loginViewsMargin">
+                    <EditText
+                        android:id="@+id/etPass"
+                        style="@style/modifiedEditText"
+                        android:hint="@string/login_password_hint"
+                        android:maxLines="1"
+                        android:inputType="textPassword"
+                        android:autofillHints="password" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/login_forget_password"
+                    style="@style/viewParent"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/newsMoreTextSize"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"/>
+
+
+                <Button
+                    android:id="@+id/bt_login"
+                    style="@style/loginButton"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/loginViewsMargin"
+                    android:text="@string/login" />
+
+
+                <TextView
+                    android:id="@+id/t_register"
+                    style="@style/parent"
+                    android:layout_marginTop="@dimen/loginViewsMargin"
+                    android:text="@string/new_user_register_now"
+                    android:textAlignment="center"
+                    android:textColor="@color/themeColor"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="12"
+                    android:gravity="center"
+                    android:layout_marginTop="30dp">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_weight="3"/>
+
+                    <TextView
+                        style="@style/viewParent.headerText.NoMode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/use_other_methods"
+                        android:layout_weight="6"
+                        android:textSize="12sp"
+                        android:textAlignment="center"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_weight="3"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginEnd="70dp"
+                    android:layout_marginStart="70dp"
+
+                    android:orientation="horizontal"
+                    >
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:src="@drawable/ic_facebook"
+                        android:background="@color/white"
+                        android:contentDescription="@string/facebook"
+                        android:layout_gravity="start"/>
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:src="@drawable/ic_google_plus"
+                        android:background="@color/white"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/google"
+                        android:layout_gravity="end"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:layout_width="11dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_side_bg" />
+
+        <ImageView
+            android:id="@+id/nav_controller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="35dp"
+            android:src="@drawable/ic_add_img"
+            android:contentDescription="@string/nav_button" />
+    </RelativeLayout>
+
+</FrameLayout>
