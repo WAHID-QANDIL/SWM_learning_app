@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.dtu.swm_learningapp-mergeDebugResources-50:/values-v24/values-v24.xml",
+            "outputFile": "com.dtu.swm_learningapp-mergeDebugResources-49:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\3a704fc1ff420a8bcf5a5a64c42ca0dc\\transformed\\appcompat-1.6.1\\res\\values-v24\\values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\74987b88686827063f7636c3f0169e2e\\transformed\\material-1.11.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\fb72dbb43164fcc44e3828da0ac72d1e\\transformed\\material-1.11.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -30,6 +20,16 @@
                         "endLines": "4,5,6,7,10,13,16,19",
                         "endColumns": "84,98,86,100,10,10,10,10",
                         "endOffsets": "427,526,613,714,913,1126,1327,1542"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\113b9f5ef9a98db5b0c1ab2c23c6c055\\transformed\\appcompat-1.6.1\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
                     }
                 }
             ]

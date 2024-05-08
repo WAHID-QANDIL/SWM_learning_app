@@ -35,7 +35,7 @@
                     style="@style/viewParent.headerText.NoMode"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    android:text="@string/screen_main_text_lable"
+                    android:text="@string/screen_main_text_label"
                     android:textColor="@color/whiteTextColor" />
 
                 <ImageView

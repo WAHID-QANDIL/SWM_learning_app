@@ -25,8 +25,6 @@
     <string name="already_have_an_account">Already have an account?</string>
     <string name="already_nhave_an_naccount">Already \nhave an \nAccount?</string>
     <string name="app_name">SWM_learning app</string>
-    <string name="bromodoro">Bromodoro</string>
-    <string name="bromodoroimage">BromodoroImage</string>
     <string name="facebook">Facebook</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="gcm_defaultSenderId" translatable="false">368605497432</string>
@@ -46,16 +44,18 @@
     <string name="nav_button">NavButton</string>
     <string name="new_user_register_now">New user? Register Now</string>
     <string name="notes">Notes</string>
+    <string name="pomodoro">pomodoro</string>
+    <string name="pomodoroImage">pomodoroImage</string>
     <string name="project_id" translatable="false">logintester-5427d</string>
     <string name="register">Register</string>
     <string name="register_image_icon">register_image_icon</string>
     <string name="register_nav_image_view">register_nav_image_view</string>
-    <string name="screen_main_text_lable">Here’s\nyour first\nstep with \nus!</string>
-    <string name="settenings">Settenings</string>
-    <string name="setteningsimage">setteningsImage</string>
+    <string name="screen_main_text_label">Here’s\nyour first\nstep with \nus!</string>
+    <string name="settings">Settings</string>
+    <string name="settingsImage">settingsImage</string>
     <string name="student">Student</string>
+    <string name="studentImage">StudentImage</string>
     <string name="student_notes">Student notes</string>
-    <string name="studentimage">StudentImage</string>
     <string name="study_from_a_to_z">Study from A to Z</string>
     <string name="use_other_methods">Use other Methods</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">

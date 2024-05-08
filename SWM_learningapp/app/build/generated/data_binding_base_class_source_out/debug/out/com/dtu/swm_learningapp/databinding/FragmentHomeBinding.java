@@ -23,9 +23,6 @@ public final class FragmentHomeBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final ImageView BromodoroImage;
-
-  @NonNull
   public final CardView HomeCard;
 
   @NonNull
@@ -59,26 +56,28 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final ToolbarBinding homeAppbar;
 
   @NonNull
+  public final ImageView pomodoroImage;
+
+  @NonNull
   public final LinearLayout row2;
 
   @NonNull
   public final LinearLayout row3;
 
   @NonNull
-  public final ImageView setteningsImage;
+  public final ImageView settingsImage;
 
   @NonNull
-  public final TextView setteningsName;
+  public final TextView settingsName;
 
-  private FragmentHomeBinding(@NonNull LinearLayout rootView, @NonNull ImageView BromodoroImage,
-      @NonNull CardView HomeCard, @NonNull ImageView HomeImage, @NonNull TextView HomeName,
-      @NonNull TextView Notes, @NonNull ImageView NotesImage, @NonNull ImageView StudentImage,
-      @NonNull TextView StudentName, @NonNull TextView amazonDesc, @NonNull TextView bromodoro,
+  private FragmentHomeBinding(@NonNull LinearLayout rootView, @NonNull CardView HomeCard,
+      @NonNull ImageView HomeImage, @NonNull TextView HomeName, @NonNull TextView Notes,
+      @NonNull ImageView NotesImage, @NonNull ImageView StudentImage, @NonNull TextView StudentName,
+      @NonNull TextView amazonDesc, @NonNull TextView bromodoro,
       @NonNull ConstraintLayout constraintLayout, @NonNull ToolbarBinding homeAppbar,
-      @NonNull LinearLayout row2, @NonNull LinearLayout row3, @NonNull ImageView setteningsImage,
-      @NonNull TextView setteningsName) {
+      @NonNull ImageView pomodoroImage, @NonNull LinearLayout row2, @NonNull LinearLayout row3,
+      @NonNull ImageView settingsImage, @NonNull TextView settingsName) {
     this.rootView = rootView;
-    this.BromodoroImage = BromodoroImage;
     this.HomeCard = HomeCard;
     this.HomeImage = HomeImage;
     this.HomeName = HomeName;
@@ -90,10 +89,11 @@ public final class FragmentHomeBinding implements ViewBinding {
     this.bromodoro = bromodoro;
     this.constraintLayout = constraintLayout;
     this.homeAppbar = homeAppbar;
+    this.pomodoroImage = pomodoroImage;
     this.row2 = row2;
     this.row3 = row3;
-    this.setteningsImage = setteningsImage;
-    this.setteningsName = setteningsName;
+    this.settingsImage = settingsImage;
+    this.settingsName = settingsName;
   }
 
   @Override
@@ -123,12 +123,6 @@ public final class FragmentHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.BromodoroImage;
-      ImageView BromodoroImage = ViewBindings.findChildViewById(rootView, id);
-      if (BromodoroImage == null) {
-        break missingId;
-      }
-
       id = R.id.HomeCard;
       CardView HomeCard = ViewBindings.findChildViewById(rootView, id);
       if (HomeCard == null) {
@@ -196,6 +190,12 @@ public final class FragmentHomeBinding implements ViewBinding {
       }
       ToolbarBinding binding_homeAppbar = ToolbarBinding.bind(homeAppbar);
 
+      id = R.id.pomodoroImage;
+      ImageView pomodoroImage = ViewBindings.findChildViewById(rootView, id);
+      if (pomodoroImage == null) {
+        break missingId;
+      }
+
       id = R.id.row2;
       LinearLayout row2 = ViewBindings.findChildViewById(rootView, id);
       if (row2 == null) {
@@ -208,21 +208,21 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.setteningsImage;
-      ImageView setteningsImage = ViewBindings.findChildViewById(rootView, id);
-      if (setteningsImage == null) {
+      id = R.id.settingsImage;
+      ImageView settingsImage = ViewBindings.findChildViewById(rootView, id);
+      if (settingsImage == null) {
         break missingId;
       }
 
-      id = R.id.setteningsName;
-      TextView setteningsName = ViewBindings.findChildViewById(rootView, id);
-      if (setteningsName == null) {
+      id = R.id.settingsName;
+      TextView settingsName = ViewBindings.findChildViewById(rootView, id);
+      if (settingsName == null) {
         break missingId;
       }
 
-      return new FragmentHomeBinding((LinearLayout) rootView, BromodoroImage, HomeCard, HomeImage,
-          HomeName, Notes, NotesImage, StudentImage, StudentName, amazonDesc, bromodoro,
-          constraintLayout, binding_homeAppbar, row2, row3, setteningsImage, setteningsName);
+      return new FragmentHomeBinding((LinearLayout) rootView, HomeCard, HomeImage, HomeName, Notes,
+          NotesImage, StudentImage, StudentName, amazonDesc, bromodoro, constraintLayout,
+          binding_homeAppbar, pomodoroImage, row2, row3, settingsImage, settingsName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

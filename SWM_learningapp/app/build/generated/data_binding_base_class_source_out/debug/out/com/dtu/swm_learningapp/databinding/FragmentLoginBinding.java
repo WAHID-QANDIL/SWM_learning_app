@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -22,6 +23,12 @@ import java.lang.String;
 public final class FragmentLoginBinding implements ViewBinding {
   @NonNull
   private final FrameLayout rootView;
+
+  @NonNull
+  public final ImageButton btFacebook;
+
+  @NonNull
+  public final ImageButton btGoogle;
 
   @NonNull
   public final Button btLogin;
@@ -50,12 +57,15 @@ public final class FragmentLoginBinding implements ViewBinding {
   @NonNull
   public final TextInputLayout textInputPassword;
 
-  private FragmentLoginBinding(@NonNull FrameLayout rootView, @NonNull Button btLogin,
-      @NonNull EditText etEmail, @NonNull EditText etPass, @NonNull TextView loginForgetPassword,
+  private FragmentLoginBinding(@NonNull FrameLayout rootView, @NonNull ImageButton btFacebook,
+      @NonNull ImageButton btGoogle, @NonNull Button btLogin, @NonNull EditText etEmail,
+      @NonNull EditText etPass, @NonNull TextView loginForgetPassword,
       @NonNull FrameLayout loginFrameContainer, @NonNull ImageView navController,
       @NonNull TextView tRegister, @NonNull TextInputLayout textInputEmail,
       @NonNull TextInputLayout textInputPassword) {
     this.rootView = rootView;
+    this.btFacebook = btFacebook;
+    this.btGoogle = btGoogle;
     this.btLogin = btLogin;
     this.etEmail = etEmail;
     this.etPass = etPass;
@@ -94,6 +104,18 @@ public final class FragmentLoginBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bt_facebook;
+      ImageButton btFacebook = ViewBindings.findChildViewById(rootView, id);
+      if (btFacebook == null) {
+        break missingId;
+      }
+
+      id = R.id.bt_google;
+      ImageButton btGoogle = ViewBindings.findChildViewById(rootView, id);
+      if (btGoogle == null) {
+        break missingId;
+      }
+
       id = R.id.bt_login;
       Button btLogin = ViewBindings.findChildViewById(rootView, id);
       if (btLogin == null) {
@@ -144,9 +166,9 @@ public final class FragmentLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentLoginBinding((FrameLayout) rootView, btLogin, etEmail, etPass,
-          loginForgetPassword, loginFrameContainer, navController, tRegister, textInputEmail,
-          textInputPassword);
+      return new FragmentLoginBinding((FrameLayout) rootView, btFacebook, btGoogle, btLogin,
+          etEmail, etPass, loginForgetPassword, loginFrameContainer, navController, tRegister,
+          textInputEmail, textInputPassword);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

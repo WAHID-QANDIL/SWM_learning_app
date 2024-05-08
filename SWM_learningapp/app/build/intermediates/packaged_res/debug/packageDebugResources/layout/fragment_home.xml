@@ -53,7 +53,7 @@
                 android:layout_width="0dp"
                 android:layout_height="160dp"
                 android:id="@+id/StudentImage"
-                android:contentDescription="@string/studentimage"
+                android:contentDescription="@string/studentImage"
                 android:src="@drawable/students"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -115,19 +115,18 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/setteningsName"
-                            android:text="@string/settenings"
+                            android:id="@+id/settingsName"
+                            android:text="@string/settings"
                             android:textSize="20sp"
                             android:textColor="@color/lavender"
-
                             android:layout_marginTop="10dp"
                             android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/setteningsImage"/>
+                            android:layout_below="@+id/settingsImage"/>
                         <ImageView
                             android:layout_width="70dp"
                             android:layout_height="70dp"
-                            android:id="@+id/setteningsImage"
-                            android:contentDescription="@string/setteningsimage"
+                            android:id="@+id/settingsImage"
+                            android:contentDescription="@string/settingsImage"
                             android:src="@drawable/settings"
                             android:layout_marginTop="15dp"
                             android:layout_centerHorizontal="true"/>
@@ -164,21 +163,21 @@
                             android:id="@+id/bromodoro"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/BromodoroImage"
+                            android:layout_below="@+id/pomodoroImage"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
 
-                            android:text="@string/bromodoro"
+                            android:text="@string/pomodoro"
                             android:textColor="@color/colorAccent"
                             android:textSize="20sp" />
 
                         <ImageView
-                            android:id="@+id/BromodoroImage"
+                            android:id="@+id/pomodoroImage"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            android:contentDescription="@string/bromodoroimage"
+                            android:contentDescription="@string/pomodoroImage"
                             android:src="@drawable/clock" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>

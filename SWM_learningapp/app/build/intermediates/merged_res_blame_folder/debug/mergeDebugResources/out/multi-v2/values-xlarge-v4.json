@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.dtu.swm_learningapp-mergeDebugResources-50:/values-xlarge-v4/values-xlarge-v4.xml",
+            "outputFile": "com.dtu.swm_learningapp-mergeDebugResources-49:/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\3a704fc1ff420a8bcf5a5a64c42ca0dc\\transformed\\appcompat-1.6.1\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "source": "C:\\Users\\SOFT\\.gradle\\caches\\transforms-3\\113b9f5ef9a98db5b0c1ab2c23c6c055\\transformed\\appcompat-1.6.1\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

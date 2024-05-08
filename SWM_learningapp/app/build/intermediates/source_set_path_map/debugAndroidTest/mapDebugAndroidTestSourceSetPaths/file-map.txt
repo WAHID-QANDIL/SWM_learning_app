@@ -1,5 +1,5 @@
-com.dtu.swm_learningapp.test.app-annotation-experimental-1.4.0-0 C:\Users\SOFT\.gradle\caches\transforms-3\4cbca928f6718bcba40babb93751690b\transformed\annotation-experimental-1.4.0\res
-com.dtu.swm_learningapp.test.app-core-1.5.0-1 C:\Users\SOFT\.gradle\caches\transforms-3\a7463ccf79cedf3f248452d3ed187ac1\transformed\core-1.5.0\res
+com.dtu.swm_learningapp.test.app-core-1.5.0-0 C:\Users\SOFT\.gradle\caches\transforms-3\77c2b9de92ea9ed1b890fef046af58f7\transformed\core-1.5.0\res
+com.dtu.swm_learningapp.test.app-annotation-experimental-1.4.0-1 C:\Users\SOFT\.gradle\caches\transforms-3\fa0ad6c63ea0ff3eab03bb0f8fc4fce5\transformed\annotation-experimental-1.4.0\res
 com.dtu.swm_learningapp.test.app-androidTest-2 C:\Users\SOFT\Desktop\SWM_learning_app\SWM_learningapp\app\build\generated\res\resValues\androidTest\debug
 com.dtu.swm_learningapp.test.app-mergeDebugAndroidTestResources-3 C:\Users\SOFT\Desktop\SWM_learning_app\SWM_learningapp\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
 com.dtu.swm_learningapp.test.app-mergeDebugAndroidTestResources-4 C:\Users\SOFT\Desktop\SWM_learning_app\SWM_learningapp\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir

@@ -143,6 +143,7 @@
                     android:orientation="horizontal"
                     >
                     <ImageButton
+                        android:id="@+id/bt_facebook"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="10"
@@ -151,6 +152,7 @@
                         android:contentDescription="@string/facebook"
                         android:layout_gravity="start"/>
                     <ImageButton
+                        android:id="@+id/bt_google"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="10"
