@@ -1,0 +1,2 @@
+com.dtu.swm_learningapp.test:style/WhiteBackgroundTheme = 0x7f010001
+com.dtu.swm_learningapp.test:style/WhiteBackgroundDialogTheme = 0x7f010000

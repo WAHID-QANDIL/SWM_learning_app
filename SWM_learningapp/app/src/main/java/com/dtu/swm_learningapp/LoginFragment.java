@@ -1,67 +1,90 @@
 package com.dtu.swm_learningapp;
-
-import android.content.Context;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
+import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
+import com.dtu.swm_learningapp.databinding.FragmentLoginBinding;
+import com.dtu.swm_learningapp.util.ToastMaker;
+import com.dtu.swm_learningapp.util.Validation;
+import com.google.firebase.auth.FirebaseAuth;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link LoginFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class LoginFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+public class LoginFragment extends Fragment implements View.OnClickListener {
+    private FragmentLoginBinding binding;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public LoginFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment LoginFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static LoginFragment newInstance(String param1, String param2) {
-        LoginFragment fragment = new LoginFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    FirebaseAuth fAuth;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+        fAuth = FirebaseAuth.getInstance();
+    }
+
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment with the binding object
+        binding = FragmentLoginBinding.inflate(inflater, container, false);
+        return binding.getRoot();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        //setting a on click listener when pressing on the login button
+        binding.btLogin.setOnClickListener(this);
+        binding.tRegister.setOnClickListener(this);
+        binding.navController.setOnClickListener(this);
+        if (fAuth.getCurrentUser() != null) {
+
+            //Navigation.findNavController(requireView()).navigate(R.id.action_loginFragment_to_homeFragment);
+
         }
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false);
+    public void onClick(View v) {
+        if(v.getId()==binding.tRegister.getId()||v.getId()==binding.navController.getId()){
+            //navigate it towards register fragment
+            Navigation.findNavController(v).navigate(R.id.action_loginFragment_to_registerFragment);
+        }
+        // extracting text from the editText
+        if (v.getId() == binding.btLogin.getId()) {
+            String email = binding.etEmail.getText().toString();
+            String pass = binding.etPass.getText().toString();
+            if(isValid(email, pass)){
+            fAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    ToastMaker.toastShower(getContext()," logged in successfully");
+
+
+                    //going to home activity
+                    Navigation.findNavController(requireView()).navigate(R.id.action_loginFragment_to_homeFragment);
+                } else {
+                    ToastMaker.toastShower(getContext()," wrong email or password");
+
+                }
+            });}
+            else {
+                ToastMaker.toastShower(getContext(),"error");
+        }
+        }
+    }
+
+    //checking for all validation
+    public boolean isValid(String email, String pass) {
+        if (!Validation.emailIsValid(email)) {
+            binding.etEmail.setError("email is not correctly formatted");
+            return false;
+        }
+        if (!Validation.passIsValid(pass)) {
+            binding.etPass.setError("password is not valid ");
+            return false;
+        }
+        return true;
     }
 }

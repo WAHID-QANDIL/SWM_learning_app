@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "368605497432",
+    "project_id": "logintester-5427d",
+    "storage_bucket": "logintester-5427d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:368605497432:android:878a0602b3af3ed8e6222d",
+        "android_client_info": {
+          "package_name": "com.dtu.swm_learningapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfn491RiE7ULe9J8fsr0NPE7CVzCvJXy4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:368605497432:android:f4d43937679b7ab9e6222d",
+        "android_client_info": {
+          "package_name": "com.rashed.login"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfn491RiE7ULe9J8fsr0NPE7CVzCvJXy4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
