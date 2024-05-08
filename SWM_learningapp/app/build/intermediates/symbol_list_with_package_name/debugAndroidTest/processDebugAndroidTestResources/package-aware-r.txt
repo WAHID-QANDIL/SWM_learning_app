@@ -1,3 +1,0 @@
-com.dtu.swm_learningapp.test
-style WhiteBackgroundDialogTheme
-style WhiteBackgroundTheme
