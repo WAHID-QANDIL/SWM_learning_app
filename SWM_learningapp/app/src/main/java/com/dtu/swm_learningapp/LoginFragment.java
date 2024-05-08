@@ -1,28 +1,20 @@
 package com.dtu.swm_learningapp;
-
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
-
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
-
 import com.dtu.swm_learningapp.databinding.FragmentLoginBinding;
+import com.dtu.swm_learningapp.util.ToastMaker;
 import com.dtu.swm_learningapp.util.Validation;
-
 import com.google.firebase.auth.FirebaseAuth;
+
 
 public class LoginFragment extends Fragment implements View.OnClickListener {
     private FragmentLoginBinding binding;
-    private static final String TAG="LoginFragment";
 
     FirebaseAuth fAuth;
 
@@ -48,7 +40,9 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         binding.tRegister.setOnClickListener(this);
         binding.navController.setOnClickListener(this);
         if (fAuth.getCurrentUser() != null) {
+
             //Navigation.findNavController(requireView()).navigate(R.id.action_loginFragment_to_homeFragment);
+
         }
     }
 
@@ -59,20 +53,25 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
             Navigation.findNavController(v).navigate(R.id.action_loginFragment_to_registerFragment);
         }
         // extracting text from the editText
-        String email = binding.etEmail.getText().toString();
-        String pass = binding.etPass.getText().toString();
-        if (v.getId() == binding.btLogin.getId() && isValid(email, pass)) {
+        if (v.getId() == binding.btLogin.getId()) {
+            String email = binding.etEmail.getText().toString();
+            String pass = binding.etPass.getText().toString();
+            if(isValid(email, pass)){
             fAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
-                    Toast.makeText(getContext(), "logged in successfully", Toast.LENGTH_SHORT).show();
+                    ToastMaker.toastShower(getContext()," logged in successfully");
+
+
                     //going to home activity
                     Navigation.findNavController(requireView()).navigate(R.id.action_loginFragment_to_homeFragment);
                 } else {
-                    Toast.makeText(getContext(), " wrong email or password", Toast.LENGTH_SHORT).show();
+                    ToastMaker.toastShower(getContext()," wrong email or password");
+
                 }
-            });
-        } else {
-            Toast.makeText(getContext(), " error", Toast.LENGTH_SHORT).show();
+            });}
+            else {
+                ToastMaker.toastShower(getContext(),"error");
+        }
         }
     }
 

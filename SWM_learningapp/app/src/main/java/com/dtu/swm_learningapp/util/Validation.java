@@ -1,11 +1,6 @@
 package com.dtu.swm_learningapp.util;
 
 import android.util.Patterns;
-
-import com.dtu.swm_learningapp.databinding.FragmentLoginBinding;
-
-import java.util.regex.Pattern;
-
 public class Validation {
    public static boolean nameIsValid(String name) {
        return !name.trim().isEmpty();

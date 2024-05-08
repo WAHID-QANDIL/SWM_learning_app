@@ -1,7 +1,4 @@
 package com.dtu.swm_learningapp;
-
-import static androidx.core.app.PendingIntentCompat.getActivity;
-
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
@@ -9,13 +6,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AnticipateInterpolator;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
-import androidx.fragment.app.FragmentManager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         initSplashScreen();
         super.onCreate(savedInstanceState);
-//        EdgeToEdge.enable(this);
+    //EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
     }
     private void initSplashScreen()

@@ -42,16 +42,17 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.coordinatorlayout)
-    implementation(libs.firebase.auth)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
     implementation(libs.firebase.firestore)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation ("androidx.core:core-splashscreen:1.0.1")
-
-
-
-
+    implementation (libs.core.splashscreen)
+    implementation(libs.credentials)
+    //firebase
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.bom)
+    implementation("com.google.firebase:firebase-auth")
+    implementation(libs.play.services.auth)
 }
