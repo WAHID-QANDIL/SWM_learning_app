@@ -9,27 +9,31 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.dtu.swm_learningapp.databinding.FragmentRegisterFragmentBinding;
 import com.dtu.swm_learningapp.util.ToastMaker;
+import com.dtu.swm_learningapp.util.UserProfile;
 import com.dtu.swm_learningapp.util.Validation;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import java.util.HashMap;
-import java.util.Map;
+
 
 
 public class RegisterFragment extends Fragment implements View.OnClickListener {
 
     //creating an object from the xml FragmentRegisterFragmentBinding file to use
     private FragmentRegisterFragmentBinding binding;
-    //creating a firebase variable
+    //creating a firebaseAuth object
     FirebaseAuth fAuth;
+
+    //creating a FirebaseFirestore object
     FirebaseFirestore fStore;
+
+    //creating a string called userId to store the auto generated userId by firebase in it
     String userId;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        //initialising fAuth,fStore
         fAuth = FirebaseAuth.getInstance();
+
         fStore=FirebaseFirestore.getInstance();
     }
 
@@ -62,64 +66,59 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
 
 
         if (v.getId() == binding.btRegister.getId()) {
-            // extracting text from the editText
+            // extracting text from the editText fields
             String email = binding.etEmail.getText().toString();
             String pass = binding.etPass.getText().toString();
             String name = binding.etName.getText().toString();
             String mobNum = binding.etMobNumber.getText().toString();
+            UserProfile userProfile= new UserProfile();
             if (isValid(name, email, pass, mobNum)) {
                 //creating a user profile
                 fAuth.createUserWithEmailAndPassword(binding.etEmail.getText().toString().trim(),
                         binding.etPass.getText().toString().trim()).addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
-                        //Toast.makeText( getContext(),"successfully add",Toast.LENGTH_SHORT).show();
-                        userId = fAuth.getCurrentUser().getUid();
-                        //Toast.makeText( getContext(),"here1",Toast.LENGTH_SHORT).show();
-                        preparingData(name, email, pass, mobNum);
 
-                        //going to login page if register successfully done
+                        ToastMaker.toastShower(getContext(),"successfully add");
+
+                        //getting the auto generated user id to access user document in fire store
+                        userId = fAuth.getCurrentUser().getUid();
+
+                        //sending data to saving data function to be correctly prepared and saved properly
+                        userProfile.savingData(getContext(),userProfile.preparingData(name, email, pass, mobNum),userId);
+
+                        //going to login page
                         Navigation.findNavController(v).navigate(R.id.action_registerFragment_to_loginFragment);
                     } else
-                            ToastMaker.toastShower(getContext(),"error" + task.getException().getMessage());
+
+                            ToastMaker.toastShower(getContext(),"error");
                 });
             }
         }
     }
-    public void preparingData(String name,String email,String pass,String mobNum){
-        //making map container to prepare the data that user entered
-        Map<String, Object>user=new HashMap<>();
-        user.put("name",name);
-        user.put("email",email);
-        user.put("pass",pass);
-        user.put("mobile number",mobNum);
 
-        //saving the user info in fire store
-        DocumentReference documentReference = fStore.collection("users").document(userId);
-        ToastMaker.toastShower(getContext(),"here3");
-        documentReference.set(user).addOnSuccessListener(unused -> {
-
-        }).addOnFailureListener(e -> {
-
-        });
-
-
-    }
     //checking for all validation
     public boolean isValid( String name, String email, String pass,String mobNum) {
         if( !Validation.nameIsValid(name)){
+            //showing error massage if the name isn`t valid
             binding.etName.setError("name is not valid");
             return false;
         }
 
         if( !Validation.emailIsValid(email)){
+            //showing error massage if the email isn`t valid
+
             binding.etEmail.setError("email is not correctly formatted");
             return false;
         }
         if( !Validation.passIsValid(pass)){
+            //showing error massage if the password isn`t valid
+
             binding.etPass.setError("password is not valid");
             return false;
         }
         if( !Validation.moblieNumberIsValid(mobNum)){
+            //showing error massage if the mobile number isn`t valid
+
             binding.etMobNumber.setError("mobile number is not valid");
             return false;
         }
