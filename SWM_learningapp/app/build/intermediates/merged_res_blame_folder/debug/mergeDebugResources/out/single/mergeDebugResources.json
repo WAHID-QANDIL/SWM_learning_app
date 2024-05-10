@@ -1,0 +1,206 @@
+[
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_ic_login_hero.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\ic_login_hero.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_building.png.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\building.png"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\anim_slide_in_right.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\anim\\slide_in_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_ic_add_img.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\ic_add_img.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_notepad.png.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\notepad.png"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_ic_google_plus.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\ic_google_plus.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_button_background_blue.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\button_background_blue.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_appwempicon.webp.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\appwempicon.webp"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_splash_icon.gif.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\splash_icon.gif"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_animation.webp.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\animation.webp"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_clock.png.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\clock.png"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_students.png.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\students.png"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_splash.webp.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\splash.webp"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\anim_slide_in_left.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\anim\\slide_in_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\transition_fade.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\transition\\fade.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_settings.png.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\settings.png"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\mipmap-xhdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_ic__1_.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\ic__1_.xml"
+    },
+    {
+        "merged": "com.dtu.swm_learningapp-debug-51:/navigation_nav_graph.xml.flat",
+        "source": "com.dtu.swm_learningapp-main-53:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\layout_toolbar.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\layout\\toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\layout_fragment_register_fragment.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\layout\\fragment_register_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_app_icon.png.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\app_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\mipmap-hdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_ic_side_bg.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\ic_side_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\mipmap-mdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\anim_stay.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\anim\\stay.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_ic_back_img.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\ic_back_img.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_ic_facebook.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\ic_facebook.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\layout_fragment_login.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\drawable_lunch_background.xml.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\drawable\\lunch_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-debug-51:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\hosam\\.gradle\\daemon\\8.4\\com.dtu.swm_learningapp-main-53:\\mipmap-hdpi\\ic_launcher.webp"
+    }
+]

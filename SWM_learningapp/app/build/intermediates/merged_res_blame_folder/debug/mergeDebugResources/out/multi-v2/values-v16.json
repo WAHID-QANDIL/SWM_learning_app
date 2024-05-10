@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.dtu.swm_learningapp-mergeDebugResources-49:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\hosam\\.gradle\\caches\\transforms-3\\dcb194a269ace53b65e76a637be1eadc\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    }
+                }
+            ]
+        }
+    ]
+}

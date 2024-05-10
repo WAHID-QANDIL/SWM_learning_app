@@ -39,8 +39,9 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         binding.btLogin.setOnClickListener(this);
         binding.tRegister.setOnClickListener(this);
         binding.navController.setOnClickListener(this);
+        //if user is already signed in go to home fragment
         if (fAuth.getCurrentUser() != null) {
-
+            //go to home fragment
             //Navigation.findNavController(requireView()).navigate(R.id.action_loginFragment_to_homeFragment);
 
         }
@@ -54,13 +55,16 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         }
         // extracting text from the editText
         if (v.getId() == binding.btLogin.getId()) {
+            //storing email and password to be used
             String email = binding.etEmail.getText().toString();
             String pass = binding.etPass.getText().toString();
+
+            //checking for validation
             if(isValid(email, pass)){
+                //check if user exist and login if so
             fAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
                     ToastMaker.toastShower(getContext()," logged in successfully");
-
 
                     //going to home activity
                     Navigation.findNavController(requireView()).navigate(R.id.action_loginFragment_to_homeFragment);

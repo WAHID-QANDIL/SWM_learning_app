@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#11CFC5</color>
+    <color name="colorPrimary">#000</color>
+    <color name="colorPrimaryDark">#FFF</color>
+    <color name="contentTextColor">#fff</color>
+    <style name="Base.Theme.Mobile_project" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+</resources>
