@@ -30,5 +30,6 @@ public class HomeFragment extends Fragment {
 //        LoginFragment.fAuth.signOut(); // to test logic for now
    }
 
+   //TODO add sign out feature
 
 }
