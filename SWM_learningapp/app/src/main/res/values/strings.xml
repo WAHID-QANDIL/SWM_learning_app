@@ -29,6 +29,10 @@
     <string name="settingsImage">settingsImage</string>
     <string name="studentImage">StudentImage</string>
     <string name="student">Student</string>
+    <string name="login_wrong_message">Wrong email or password</string>
+    <string name="login_right_message">Login successfully </string>
+    <string name="add_new_user_message">User added successfully </string>
+    <string name="add_new_user_error_message">Please complete your registration form</string>
 
 
     <!--colors for crop activity-->

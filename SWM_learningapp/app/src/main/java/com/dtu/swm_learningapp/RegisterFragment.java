@@ -11,23 +11,34 @@ import com.dtu.swm_learningapp.databinding.FragmentRegisterFragmentBinding;
 import com.dtu.swm_learningapp.util.ToastMaker;
 import com.dtu.swm_learningapp.util.UserProfile;
 import com.dtu.swm_learningapp.util.Validation;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 
 
-public class RegisterFragment extends Fragment implements View.OnClickListener {
+public class RegisterFragment extends Fragment implements View.OnClickListener, OnCompleteListener<AuthResult> {
 
     //creating an object from the xml FragmentRegisterFragmentBinding file to use
     private FragmentRegisterFragmentBinding binding;
     //creating a firebaseAuth object
-    FirebaseAuth fAuth;
+    private FirebaseAuth fAuth;
 
     //creating a FirebaseFirestore object
-    FirebaseFirestore fStore;
+    private FirebaseFirestore fStore;
+
+    private String email;
+    private String pass ;
+    private String name ;
+    private String mobNum ;
+    private UserProfile userProfile ;
+    private String userId;
+    Snackbar snackbar;
 
     //creating a string called userId to store the auto generated userId by firebase in it
-    String userId;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,45 +64,32 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
         //setting a on click listener when pressing on the register button
         binding.btRegister.setOnClickListener(this);
         binding.tLogin.setOnClickListener(this);
-        binding.navController.setOnClickListener(this);
+        binding.navRegisterImageviewButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == binding.tLogin.getId() || v.getId() == binding.navController.getId()) {
+        if (v.getId() == binding.tLogin.getId() || v.getId() == binding.navRegisterImageviewButton.getId()) {
             //navigate it towards login fragment
             Navigation.findNavController(v).navigate(R.id.action_registerFragment_to_loginFragment);
+            return;
         }
 
 
 
         if (v.getId() == binding.btRegister.getId()) {
             // extracting text from the editText fields
-            String email = binding.etEmail.getText().toString();
-            String pass = binding.etPass.getText().toString();
-            String name = binding.etName.getText().toString();
-            String mobNum = binding.etMobNumber.getText().toString();
-            UserProfile userProfile= new UserProfile();
+            email = binding.etEmail.getText().toString();
+            pass = binding.etPass.getText().toString();
+            name = binding.etName.getText().toString();
+            mobNum = binding.etMobNumber.getText().toString();
+
             if (isValid(name, email, pass, mobNum)) {
-                //creating a user profile
-                fAuth.createUserWithEmailAndPassword(binding.etEmail.getText().toString().trim(),
-                        binding.etPass.getText().toString().trim()).addOnCompleteListener(task -> {
-                    if (task.isSuccessful()) {
-
-                        ToastMaker.toastShower(getContext(),"successfully add");
-
-                        //getting the auto generated user id to access user document in fire store
-                        userId = fAuth.getCurrentUser().getUid();
-
-                        //sending data to saving data function to be correctly prepared and saved properly
-                        userProfile.savingData(getContext(),userProfile.preparingData(name, email, pass, mobNum),userId);
-
-                        //going to login page
-                        Navigation.findNavController(v).navigate(R.id.action_registerFragment_to_loginFragment);
-                    } else
-
-                            ToastMaker.toastShower(getContext(),"error");
-                });
+                fAuth.createUserWithEmailAndPassword(email.trim(), pass.trim()).addOnCompleteListener(this);
+            }
+            else
+            {
+                Snackbar.make(requireView(),getResources().getText(R.string.add_new_user_error_message),Snackbar.LENGTH_SHORT).setTextColor(getResources().getColor(R.color.colorAccent, requireContext().getTheme())).show();
             }
         }
     }
@@ -126,4 +124,30 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
         return true;
     }
 
+    @Override
+    public void onComplete(@NonNull Task<AuthResult> task) {
+        if (task.isSuccessful()) {
+
+            email = binding.etEmail.getText().toString();
+            pass = binding.etPass.getText().toString();
+            name = binding.etName.getText().toString();
+            mobNum = binding.etMobNumber.getText().toString();
+            //creating a user profile
+            userProfile= new UserProfile();
+
+             Snackbar.make(requireView(),getResources().getText(R.string.add_new_user_message),Snackbar.LENGTH_SHORT).setTextColor(getResources().getColor(R.color.colorAccent, requireContext().getTheme())).show();
+
+
+            //getting the auto incremented user id to access user document in fire store
+            assert fAuth.getCurrentUser() != null; //To avoid to get null when we try to get active user
+            userId = fAuth.getCurrentUser().getUid();
+            //sending data to saving data function to be correctly prepared and saved properly
+            userProfile.savingData(getContext(),userProfile.preparingData(name, email, pass, mobNum),userId);
+            //navigate to login fragment
+            Navigation.findNavController(requireView()).navigate(R.id.action_registerFragment_to_loginFragment);
+
+
+        } else
+           Snackbar.make(requireView(),getResources().getText(R.string.add_new_user_error_message),Snackbar.LENGTH_SHORT).setTextColor(getResources().getColor(R.color.colorAccent, requireContext().getTheme())).show();
+    }
 }

@@ -10,13 +10,17 @@ import android.view.ViewGroup;
 import com.dtu.swm_learningapp.databinding.FragmentLoginBinding;
 import com.dtu.swm_learningapp.util.ToastMaker;
 import com.dtu.swm_learningapp.util.Validation;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class LoginFragment extends Fragment implements View.OnClickListener {
+public class LoginFragment extends Fragment implements View.OnClickListener, OnCompleteListener<AuthResult> {
     private FragmentLoginBinding binding;
 
-    FirebaseAuth fAuth;
+    static FirebaseAuth fAuth;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,44 +42,34 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         //setting a on click listener when pressing on the login button
         binding.btLogin.setOnClickListener(this);
         binding.tRegister.setOnClickListener(this);
-        binding.navController.setOnClickListener(this);
+        binding.navImageviewButton.setOnClickListener(this);
         //if user is already signed in go to home fragment
         if (fAuth.getCurrentUser() != null) {
-            //go to home fragment
-            //Navigation.findNavController(requireView()).navigate(R.id.action_loginFragment_to_homeFragment);
+            //navigate to home fragment
+            Navigation.findNavController(requireView()).navigate(R.id.action_loginFragment_to_homeFragment);
 
         }
     }
 
     @Override
     public void onClick(View v) {
-        if(v.getId()==binding.tRegister.getId()||v.getId()==binding.navController.getId()){
+        if(v.getId()==binding.tRegister.getId()||v.getId()==binding.navImageviewButton.getId()){
             //navigate it towards register fragment
             Navigation.findNavController(v).navigate(R.id.action_loginFragment_to_registerFragment);
         }
-        // extracting text from the editText
-        if (v.getId() == binding.btLogin.getId()) {
-            //storing email and password to be used
+        else if (v.getId() == binding.btLogin.getId()) {
+            //get email and password to be used
             String email = binding.etEmail.getText().toString();
             String pass = binding.etPass.getText().toString();
+            if (isValid(email, pass))
+            {
+                fAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(this);
 
-            //checking for validation
-            if(isValid(email, pass)){
-                //check if user exist and login if so
-            fAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(task -> {
-                if (task.isSuccessful()) {
-                    ToastMaker.toastShower(getContext()," logged in successfully");
+            }else
+            {
+                Snackbar.make(requireView(),R.string.login_wrong_message,Snackbar.LENGTH_SHORT).setTextColor(getResources().getColor(R.color.colorAccent, requireContext().getTheme())).show();
+            }
 
-                    //going to home activity
-                    Navigation.findNavController(requireView()).navigate(R.id.action_loginFragment_to_homeFragment);
-                } else {
-                    ToastMaker.toastShower(getContext()," wrong email or password");
-
-                }
-            });}
-            else {
-                ToastMaker.toastShower(getContext(),"error");
-        }
         }
     }
 
@@ -90,5 +84,20 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public void onComplete(@NonNull Task<AuthResult> task) {
+        String email = binding.etEmail.getText().toString();
+        String pass = binding.etPass.getText().toString();
+        if (task.isSuccessful() ) {
+            Snackbar.make(requireView(),R.string.login_right_message,Snackbar.LENGTH_SHORT).show();
+            //going to home activity
+            Navigation.findNavController(requireView()).navigate(R.id.action_loginFragment_to_homeFragment);
+        } else {
+//            ToastMaker.toastShower(getContext()," wrong email or password");
+            Snackbar.make(requireView(),R.string.login_wrong_message,Snackbar.LENGTH_SHORT).setTextColor(getResources().getColor(R.color.colorAccent, requireContext().getTheme())).show();
+
+        }
     }
 }
