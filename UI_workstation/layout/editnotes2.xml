@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15px"
+    android:layout_marginBottom="10dp"
+    android:background="#00B0FF"
+    xmlns:tools="http://schemas.android.com/tools">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notes"
+        android:textSize="20sp"
+        android:textColor="#000000" />
+
+    <LinearLayout
+        android:layout_width="392dp"
+        android:layout_height="182dp"
+        android:layout_above="@+id/null"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="448dp"
+        android:background="@drawable/rounded_corner"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+
+        <TextView
+            android:id="@+id/titleoutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            tools:text="My title" />
+
+        <TextView
+            android:id="@+id/descriptionoutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleoutput"
+            android:textColor="#393939"
+            tools:text="My long long long descrption" />
+
+        <TextView
+            android:id="@+id/timeoutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descriptionoutput"
+            android:gravity="end"
+            android:textColor="#858484"
+            android:textSize="12dp"
+            tools:text="Jan 21 2020 " />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="190dp"
+        android:layout_marginBottom="27dp"
+        android:contentDescription="@string/add_new_order"
+        android:onClick="onClickDone"
+        android:src="@drawable/ic_dark_mode" />
+
+
+</RelativeLayout>
