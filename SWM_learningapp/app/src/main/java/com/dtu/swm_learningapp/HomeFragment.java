@@ -17,7 +17,7 @@ public class HomeFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment with the binding object
         binding = FragmentHomeBinding.inflate(inflater, container, false);
@@ -30,6 +30,9 @@ public class HomeFragment extends Fragment {
 //        LoginFragment.fAuth.signOut(); // to test logic for now
    }
 
-   //TODO add sign out feature
-
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }
