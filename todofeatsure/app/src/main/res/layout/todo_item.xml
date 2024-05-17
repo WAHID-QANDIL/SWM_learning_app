@@ -1,0 +1,54 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <CheckBox
+            android:id="@+id/todoCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:buttonTint="#2FF6DF"
+            tools:text="This is a test note." />
+
+        <TextView
+            android:id="@+id/todoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/todoCheckBox"
+            android:layout_marginStart="8dp"
+            android:text="Sample Task"
+            android:textSize="16sp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/priorityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/todoText"
+            android:layout_toEndOf="@id/todoCheckBox"
+            android:layout_marginStart="8dp"
+            android:text="Priority: High"
+            android:textSize="14sp"
+            android:textColor="@color/gray" />
+
+        <ImageView
+            android:id="@+id/deleteIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_delete"
+            android:contentDescription="Delete Task"
+            android:padding="8dp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
