@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    android:id="@+id/login_frame_container"
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@+id/login_frame_container"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -80,7 +80,9 @@
                     android:textColor="@color/primaryTextColor"
                     android:textSize="@dimen/newsMoreTextSize"
                     android:layout_gravity="end"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    />
 
 
                 <Button
@@ -185,5 +187,13 @@
             android:src="@drawable/ic_add_img"
             android:contentDescription="@string/nav_button" />
     </RelativeLayout>
+    <include layout="@layout/fragment_forget_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        />
 
-</FrameLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
