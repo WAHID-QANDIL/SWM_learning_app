@@ -15,7 +15,7 @@ public class UserProfile {
         fStore = FirebaseFirestore.getInstance();
     }
 
-    public Map<String, Object> preparingData(String name, String email, String pass, String mobNum){
+    public Map<String, Object> getUserProfile(String name, String email, String pass, String mobNum){
         //making map container to prepare the data that user entered
         Map<String, Object>user=new HashMap<>();
         user.put("name",name);

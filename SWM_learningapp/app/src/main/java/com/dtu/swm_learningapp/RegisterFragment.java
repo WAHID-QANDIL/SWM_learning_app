@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.dtu.swm_learningapp.databinding.FragmentRegisterFragmentBinding;
-import com.dtu.swm_learningapp.util.ToastMaker;
 import com.dtu.swm_learningapp.util.UserProfile;
 import com.dtu.swm_learningapp.util.Validation;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -75,8 +74,6 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
             return;
         }
 
-
-
         if (v.getId() == binding.btRegister.getId()) {
             // extracting text from the editText fields
             email = binding.etEmail.getText().toString();
@@ -142,12 +139,17 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
             assert fAuth.getCurrentUser() != null; //To avoid to get null when we try to get active user
             userId = fAuth.getCurrentUser().getUid();
             //sending data to saving data function to be correctly prepared and saved properly
-            userProfile.savingData(getContext(),userProfile.preparingData(name, email, pass, mobNum),userId);
+            userProfile.savingData(getContext(),userProfile.getUserProfile(name, email, pass, mobNum),userId);
             //navigate to login fragment
             Navigation.findNavController(requireView()).navigate(R.id.action_registerFragment_to_loginFragment);
 
 
         } else
            Snackbar.make(requireView(),getResources().getText(R.string.add_new_user_error_message),Snackbar.LENGTH_SHORT).setTextColor(getResources().getColor(R.color.colorAccent, requireContext().getTheme())).show();
+    }
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
 }
