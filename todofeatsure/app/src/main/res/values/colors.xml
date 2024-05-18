@@ -1,0 +1,6 @@
+<resources>
+    <color name="background_color">#FAFAFA</color>
+    <color name="teal_200">#80CBC4</color>
+    <color name="teal_700">#00796B</color>
+    <color name="gray">#BDBDBD</color>
+</resources>
