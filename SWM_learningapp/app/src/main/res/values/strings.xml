@@ -37,6 +37,7 @@
     <string name="user_email">User Email</string>
     <string name="send">Send</string>
     <string name="enter_your_email_to_send_an_email_verivecation_to_reset_your_password">Enter your email to send an email verivecation to reset your password</string>
+    <string name="log_out">Log out</string>
 
 
     <!--colors for crop activity-->
