@@ -22,7 +22,7 @@
     <string name="notes">Notes</string>
     <string name="student_notes">Student notes</string>
     <string name="pomodoroImage">pomodoroImage</string>
-    <string name="pomodoro">pomodoro</string>
+    <string name="pomodoro">Pomodoro</string>
     <string name="settings">Settings</string>
     <string name="home">Home</string>
     <string name="study_from_a_to_z">Study from A to Z</string>
@@ -38,6 +38,13 @@
     <string name="send">Send</string>
     <string name="enter_your_email_to_send_an_email_verivecation_to_reset_your_password">Enter your email to send an email verivecation to reset your password</string>
     <string name="log_out">Log out</string>
+    <string name="to_do_list">To do list</string>
+    <string name="user_image">user_image</string>
+    <string name="save_changes">Save changes</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="phone_number">phone number</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
 
 
     <!--colors for crop activity-->
