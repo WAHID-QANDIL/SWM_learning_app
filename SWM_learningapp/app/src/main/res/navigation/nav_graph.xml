@@ -52,10 +52,28 @@
             app:destination="@id/user_profile"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_homeFragment_to_bomodoroFragment"
+            app:destination="@id/bomodoroFragment" />
     </fragment>
     <fragment android:id="@+id/user_profile"
         android:name="com.dtu.swm_learningapp.HomeUserFragment"
         android:label="user_profile"
         tools:layout="@layout/fragment_home_user"
+        />
+    <fragment
+        android:id="@+id/bomodoroFragment"
+        android:name="com.dtu.swm_learningapp.BomodoroFragment"
+        tools:layout="@layout/fragment_bomodoro"
+        android:label="BomodoroFragment" >
+        <action
+            android:id="@+id/action_bomodoroFragment_to_breakFragment"
+            app:destination="@id/breakFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/breakFragment"
+        android:name="com.dtu.swm_learningapp.BreakFragment"
+        android:label="BreakFragment"
+        tools:layout="@layout/fragment_break"
         />
 </navigation>

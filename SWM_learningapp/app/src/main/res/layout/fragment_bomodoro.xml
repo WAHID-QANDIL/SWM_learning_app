@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:paddingTop="40dp"
+    android:background="#EFE9E9"
+    >
+
+    <Button
+        android:id="@+id/bomodoro_backbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logout_button_background"
+        android:drawableStart="@drawable/baseline_keyboard_backspace_24"
+        android:text="@string/back"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/textViewTimer"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/circular_background"
+        android:gravity="center"
+        android:text="@string/_25_00"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:elevation="8dp"
+        android:padding="16dp" />
+
+
+    <TextView
+        android:id="@+id/textViewRoundCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTimer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/round_0"
+        android:textColor="#005C47"
+        android:textSize="30sp"
+        android:textStyle="bold"
+
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:elevation="4dp"
+        android:shadowColor="#888"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2" />
+
+
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="262dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/textViewRoundCount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="64dp"
+
+
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="64dp"
+        android:backgroundTint="#97D8BE"
+
+
+        android:text="@string/get_started"
+        android:textColor="@android:color/white"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="145dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/buttonStart"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="46dp"
+        android:backgroundTint="#B1A26B"
+        android:text="@string/reset"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/buttonBreak"
+        android:layout_width="145dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/buttonStart"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="43dp"
+        android:backgroundTint="#B1A26B"
+        android:text="@string/get_break"
+        android:textColor="#FFFFFF" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/buttonBreak"
+        android:visibility="gone" />
+
+
+
+</RelativeLayout>
