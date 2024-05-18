@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +27,7 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
     private FragmentRegisterFragmentBinding binding;
     //creating a firebaseAuth object
     private FirebaseAuth fAuth;
+    private static final String TAG = "RegisterFragment";
 
     //creating a FirebaseFirestore object
     private FirebaseFirestore fStore;
@@ -73,20 +76,26 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
             Navigation.findNavController(v).navigate(R.id.action_registerFragment_to_loginFragment);
             return;
         }
-
         if (v.getId() == binding.btRegister.getId()) {
             // extracting text from the editText fields
             email = binding.etEmail.getText().toString();
             pass = binding.etPass.getText().toString();
             name = binding.etName.getText().toString();
             mobNum = binding.etMobNumber.getText().toString();
-
             if (isValid(name, email, pass, mobNum)) {
                 fAuth.createUserWithEmailAndPassword(email.trim(), pass.trim()).addOnCompleteListener(this);
+                fAuth.signOut();
+                Navigation.findNavController(requireView()).navigate(R.id.action_registerFragment_to_loginFragment);
+                Snackbar.make(requireView(),getResources().getText(R.string.add_new_user_message),
+                        Snackbar.LENGTH_SHORT).setTextColor(getResources().getColor(R.color.colorAccent,
+                        requireContext().getTheme())).show();
             }
             else
             {
-                Snackbar.make(requireView(),getResources().getText(R.string.add_new_user_error_message),Snackbar.LENGTH_SHORT).setTextColor(getResources().getColor(R.color.colorAccent, requireContext().getTheme())).show();
+                Snackbar.make(requireView(),getResources().getText(R.string.add_new_user_error_message),Snackbar.LENGTH_SHORT).
+                        setTextColor(getResources().
+                                getColor(R.color.colorAccent, requireContext().
+                                        getTheme())).show();
             }
         }
     }
@@ -126,26 +135,27 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
         if (task.isSuccessful()) {
 
             email = binding.etEmail.getText().toString();
-            pass = binding.etPass.getText().toString();
             name = binding.etName.getText().toString();
             mobNum = binding.etMobNumber.getText().toString();
             //creating a user profile
             userProfile= new UserProfile();
 
-             Snackbar.make(requireView(),getResources().getText(R.string.add_new_user_message),Snackbar.LENGTH_SHORT).setTextColor(getResources().getColor(R.color.colorAccent, requireContext().getTheme())).show();
 
 
             //getting the auto incremented user id to access user document in fire store
             assert fAuth.getCurrentUser() != null; //To avoid to get null when we try to get active user
             userId = fAuth.getCurrentUser().getUid();
             //sending data to saving data function to be correctly prepared and saved properly
-            userProfile.savingData(getContext(),userProfile.getUserProfile(name, email, pass, mobNum),userId);
+            userProfile.savingData(getContext(),userProfile.getUserProfile(name, email, mobNum),userId);
             //navigate to login fragment
-            Navigation.findNavController(requireView()).navigate(R.id.action_registerFragment_to_loginFragment);
+            return;
+            }
+        else
+        {
+            Log.d(TAG, "onComplete: else statement");
+            Snackbar.make(requireView(),getResources().getText(R.string.add_new_user_error_message),Snackbar.LENGTH_SHORT).setTextColor(getResources().getColor(R.color.colorAccent, requireContext().getTheme())).show();
+        }
 
-
-        } else
-           Snackbar.make(requireView(),getResources().getText(R.string.add_new_user_error_message),Snackbar.LENGTH_SHORT).setTextColor(getResources().getColor(R.color.colorAccent, requireContext().getTheme())).show();
     }
     @Override
     public void onDestroyView() {
