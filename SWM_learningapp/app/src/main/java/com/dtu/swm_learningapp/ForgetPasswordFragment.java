@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.dtu.swm_learningapp.databinding.FragmentForgetPasswordBinding;
 import com.dtu.swm_learningapp.util.ToastMaker;
@@ -51,17 +52,17 @@ public class ForgetPasswordFragment extends BottomSheetDialogFragment implements
             String email = binding.etEmail.getText().toString();
             fAuth.sendPasswordResetEmail(email).addOnSuccessListener(unused ->{
                                     dismiss();
-                                    Snackbar.make(requireView(),
+                                    Toast.makeText(requireContext(),
                                     "An email was send to "+ binding.etEmail.getText().toString(),
-                                    Snackbar.LENGTH_LONG).show();
+                                    Toast.LENGTH_LONG).show();
             }).
             addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
                             dismiss();
-                            Snackbar.make(requireView(),
+                            Toast.makeText(requireContext(),
                             "Can't get email like this "+ binding.etEmail.getText().toString(),
-                            Snackbar.LENGTH_LONG).show();
+                            Toast.LENGTH_LONG).show();
                 }
             });
         }

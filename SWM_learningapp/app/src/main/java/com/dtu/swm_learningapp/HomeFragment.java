@@ -49,7 +49,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         binding.HomeCard.setOnClickListener(this);
         binding.notesCard.setOnClickListener(this);
         binding.settingsCard.setOnClickListener(this);
-        binding.promodoroCard.setOnClickListener(this);
+        binding.pomodoroCard.setOnClickListener(this);
     }
 //hosam@gmail.com : email
 //123456789 : pass
@@ -60,10 +60,19 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         {
             LoginFragment.fAuth.signOut();
             Navigation.findNavController(requireView()).navigate(R.id.action_homeFragment_to_loginFragment);
+            return;
         }
         if (id == binding.HomeCard.getId())
         {
             Navigation.findNavController(requireView()).navigate(R.id.action_homeFragment_to_user_profile);
+            return;
         }
+
+        if (id == binding.pomodoroCard.getId())
+        {
+            Navigation.findNavController(requireView()).navigate(R.id.action_homeFragment_to_bomodoroFragment);
+            return;
+        }
+
     }
 }

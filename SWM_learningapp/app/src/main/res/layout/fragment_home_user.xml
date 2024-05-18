@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 >
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+    />
 
-<LinearLayout
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
     android:id="@+id/user_profile"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -19,6 +21,15 @@
     android:orientation="vertical"
     android:layout_margin="20dp"
     >
+
+    <Button
+        android:id="@+id/userprofile_backbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logout_button_background"
+        android:drawableStart="@drawable/baseline_keyboard_backspace_24"
+        android:text="@string/back"
+        android:textColor="@color/white"/>
     <ImageView
         android:layout_marginTop="30dp"
         android:layout_width="100dp"
@@ -97,6 +108,6 @@
         android:background="@drawable/button_background_blue"
         android:text="@string/reset_password"/>
 </LinearLayout>
-    </ScrollView>
+</ScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
