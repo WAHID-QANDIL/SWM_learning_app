@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+<LinearLayout
+    android:id="@+id/user_profile"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".HomeUserFragment"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    >
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/students"
+        android:layout_gravity="center"
+        android:contentDescription="@string/user_image"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/modifiedEditText"
+        android:autofillHints="name"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_margin="16dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="user_email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:hint="@string/user_email"
+        android:textSize="20sp"
+        android:layout_margin="16dp"
+        style="@style/modifiedEditText"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="phone_number"
+        android:inputType="phone"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:hint="@string/phone_number"
+        android:textSize="20sp"
+        android:layout_margin="16dp"
+        style="@style/modifiedEditText"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background_blue"
+        android:layout_gravity="center"
+        android:text="@string/save_changes"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="current_password"
+        android:textColor="@color/black"
+        android:inputType="textPassword"
+        android:textColorHint="@color/black"
+        android:hint="@string/current_password"
+        android:textSize="20sp"
+        android:layout_margin="16dp"
+        style="@style/modifiedEditText"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="new_password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:hint="@string/new_password"
+        android:textSize="20sp"
+        android:layout_margin="16dp"
+        style="@style/modifiedEditText"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button_background_blue"
+        android:text="@string/reset_password"/>
+</LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
