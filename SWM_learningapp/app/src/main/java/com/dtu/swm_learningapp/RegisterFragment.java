@@ -51,7 +51,7 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment with the binding object
         binding = FragmentRegisterFragmentBinding.inflate(inflater, container, false);
@@ -84,11 +84,11 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
             mobNum = binding.etMobNumber.getText().toString();
             if (isValid(name, email, pass, mobNum)) {
                 fAuth.createUserWithEmailAndPassword(email.trim(), pass.trim()).addOnCompleteListener(this);
-                fAuth.signOut();
                 Navigation.findNavController(requireView()).navigate(R.id.action_registerFragment_to_loginFragment);
                 Snackbar.make(requireView(),getResources().getText(R.string.add_new_user_message),
                         Snackbar.LENGTH_SHORT).setTextColor(getResources().getColor(R.color.colorAccent,
                         requireContext().getTheme())).show();
+                fAuth.signOut();
             }
             else
             {
