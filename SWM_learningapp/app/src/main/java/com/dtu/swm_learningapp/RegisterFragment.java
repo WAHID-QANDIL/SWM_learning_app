@@ -139,9 +139,6 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
             mobNum = binding.etMobNumber.getText().toString();
             //creating a user profile
             userProfile= new UserProfile();
-
-
-
             //getting the auto incremented user id to access user document in fire store
             assert fAuth.getCurrentUser() != null; //To avoid to get null when we try to get active user
             userId = fAuth.getCurrentUser().getUid();

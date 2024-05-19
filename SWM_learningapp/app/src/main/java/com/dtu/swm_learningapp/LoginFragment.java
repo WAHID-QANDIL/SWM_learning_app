@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +36,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener, OnC
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment with the binding object
          binding = FragmentLoginBinding.inflate(inflater, container, false);
-        return binding.getRoot();
+         return binding.getRoot();
     }
 
 
@@ -71,7 +73,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener, OnC
                 String pass = binding.etPass.getText().toString();
                 if (isValid(email, pass)) {
                     fAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(this);
-
+                    Log.d(TAG, "onClick: is valid");
                 } else {
                     Snackbar.make(requireView(),
                                     R.string.login_wrong_message, Snackbar.LENGTH_SHORT).
@@ -115,6 +117,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener, OnC
             //going to home activity
             Navigation.findNavController(requireView()).navigate(R.id.action_loginFragment_to_homeFragment);
         } else {
+            Log.d(TAG, "onComplete: else statment");
 //            ToastMaker.toastShower(getContext()," wrong email or password");
             Snackbar.make(requireView(),R.string.login_wrong_message,Snackbar.LENGTH_SHORT).setTextColor(getResources().getColor(R.color.colorAccent, requireContext().getTheme())).show();
 

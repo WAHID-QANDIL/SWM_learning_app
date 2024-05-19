@@ -30,19 +30,17 @@ public class BomodoroFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         binding = FragmentBomodoroBinding.inflate(inflater, container, false);
-
-//        textViewTimer = binding..findViewById(R.id.textViewTimer);
-//        textViewRoundCount = view.findViewById(R.id.textViewRoundCount);
-//        buttonStart = view.findViewById(R.id.buttonStart);
-//        buttonReset = view.findViewById(R.id.buttonReset);
-//        buttonBreak = view.findViewById(R.id.buttonBreak);
-
         textViewTimer = binding.textViewTimer;
         textViewRoundCount = binding.textViewRoundCount;
         updateTimer();
         initListeners();
         return  binding.getRoot();
 
+//        textViewTimer = binding..findViewById(R.id.textViewTimer);
+//        textViewRoundCount = view.findViewById(R.id.textViewRoundCount);
+//        buttonStart = view.findViewById(R.id.buttonStart);
+//        buttonReset = view.findViewById(R.id.buttonReset);
+//        buttonBreak = view.findViewById(R.id.buttonBreak);
 //        buttonStart.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -119,6 +117,9 @@ public class BomodoroFragment extends Fragment implements View.OnClickListener {
 
     private void startBreak() {
         Log.d("TimerFragment", "Starting break timer");
+        if (countDownTimer != null)
+            pauseTimer();
+
         Navigation.findNavController(requireView()).navigate(R.id.action_bomodoroFragment_to_breakFragment);
 //        FragmentManager fragmentManager = getParentFragmentManager();
 //        FragmentTransaction transaction = fragmentManager.beginTransaction();
@@ -181,6 +182,8 @@ public class BomodoroFragment extends Fragment implements View.OnClickListener {
             requireActivity().getSupportFragmentManager().popBackStack();
             return;
         }
+
+        return;
 
     }
 }

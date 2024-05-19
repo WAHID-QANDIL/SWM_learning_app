@@ -17,12 +17,12 @@ public class UserProfile {
         fStore = FirebaseFirestore.getInstance();
     }
 
-    public Map<String, Object> getUserProfile(String name, String email, String mobNum){
+    public Map<String, Object> getUserProfile(String name, String email, String phone){
         //making map container to prepare the data that user entered
         Map<String, Object>user=new HashMap<>();
         user.put("name",name);
         user.put("email",email);
-        user.put("mobile number",mobNum);
+        user.put("phone",phone);
         return user;
     }
     public void savingData(Context context, Map<String, Object>user,String userId){

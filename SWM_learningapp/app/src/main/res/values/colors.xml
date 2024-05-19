@@ -18,4 +18,6 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="lavender">#8692f7</color>
+    <color name="background_color">#FAFAFA</color>
+    <color name="gray">#BDBDBD</color>
 </resources>

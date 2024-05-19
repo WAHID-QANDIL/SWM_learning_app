@@ -55,6 +55,9 @@
         <action
             android:id="@+id/action_homeFragment_to_bomodoroFragment"
             app:destination="@id/bomodoroFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_taskListFragment"
+            app:destination="@id/taskListFragment" />
     </fragment>
     <fragment android:id="@+id/user_profile"
         android:name="com.dtu.swm_learningapp.HomeUserFragment"
@@ -76,4 +79,9 @@
         android:label="BreakFragment"
         tools:layout="@layout/fragment_break"
         />
+    <fragment
+        android:id="@+id/taskListFragment"
+        tools:layout="@layout/fragment_task_list"
+        android:name="com.dtu.swm_learningapp.TaskListFragment"
+        android:label="TaskListFragment" />
 </navigation>

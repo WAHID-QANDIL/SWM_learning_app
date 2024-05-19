@@ -48,7 +48,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         binding.logoutButton.setOnClickListener(this);
         binding.HomeCard.setOnClickListener(this);
         binding.notesCard.setOnClickListener(this);
-        binding.settingsCard.setOnClickListener(this);
+        binding.todoList.setOnClickListener(this);
         binding.pomodoroCard.setOnClickListener(this);
     }
 //hosam@gmail.com : email
@@ -72,6 +72,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         {
             Navigation.findNavController(requireView()).navigate(R.id.action_homeFragment_to_bomodoroFragment);
             return;
+        }
+        if (id == binding.todoList.getId())
+        {
+            Navigation.findNavController(requireView()).navigate(R.id.action_homeFragment_to_taskListFragment);
         }
 
     }
