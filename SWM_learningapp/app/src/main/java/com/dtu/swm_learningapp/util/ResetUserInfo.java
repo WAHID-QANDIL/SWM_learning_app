@@ -33,7 +33,7 @@ public class ResetUserInfo {
     }
 
     public void updatePhoneInFireStore(Context context, String newPhone) {
-        if (Validation.moblieNumberIsValid(newPhone)) {
+        if (Validation.phoneIsValid(newPhone)) {
             userRef.update("mobile number", newPhone)
                     .addOnSuccessListener(unused -> {
                         ToastMaker.toastShower(context, "Phone number updated successfully.");
