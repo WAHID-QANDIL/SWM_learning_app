@@ -14,7 +14,7 @@ public class Validation {
        return pass.trim().length() > 6;
    }
 
-    public static boolean moblieNumberIsValid(String mobNumber) {
+    public static boolean phoneIsValid(String mobNumber) {
         return !mobNumber.isEmpty() && android.util.Patterns.PHONE.matcher(mobNumber).matches();
     }
 
