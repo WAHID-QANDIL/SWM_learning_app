@@ -1,11 +1,8 @@
 package com.dtu.swm_learningapp;
-import android.app.ActionBar;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toolbar;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -76,6 +73,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         if (id == binding.todoList.getId())
         {
             Navigation.findNavController(requireView()).navigate(R.id.action_homeFragment_to_taskListFragment);
+        }
+        if (id == binding.notesCard.getId())
+        {
+            Navigation.findNavController(requireView()).navigate(R.id.action_homeFragment_to_noteListFragment);
+            return;
+
         }
 
     }

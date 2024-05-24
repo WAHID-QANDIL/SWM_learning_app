@@ -58,6 +58,9 @@
         <action
             android:id="@+id/action_homeFragment_to_taskListFragment"
             app:destination="@id/taskListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_noteListFragment"
+            app:destination="@id/noteListFragment" />
     </fragment>
     <fragment android:id="@+id/user_profile"
         android:name="com.dtu.swm_learningapp.HomeUserFragment"
@@ -84,4 +87,18 @@
         tools:layout="@layout/fragment_task_list"
         android:name="com.dtu.swm_learningapp.TaskListFragment"
         android:label="TaskListFragment" />
+    <fragment
+        android:id="@+id/noteListFragment"
+        android:name="com.dtu.swm_learningapp.NoteListFragment"
+        android:label="fragment_note_list"
+        tools:layout="@layout/fragment_note_list" >
+        <action
+            android:id="@+id/action_noteListFragment_to_noteDetailsFragment"
+            app:destination="@id/noteDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteDetailsFragment"
+        android:name="com.dtu.swm_learningapp.NoteDetailsFragment"
+        android:label="fragment_note_details"
+        tools:layout="@layout/fragment_note_details" />
 </navigation>

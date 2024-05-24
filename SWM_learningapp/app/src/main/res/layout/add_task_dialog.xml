@@ -5,8 +5,9 @@
 
     <!-- Label for the EditText -->
     <TextView
+        android:gravity="center"
         android:id="@+id/newTaskLabel"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/new_task"
         android:textColor="@android:color/black"
@@ -14,11 +15,13 @@
         android:textStyle="bold"
         android:layout_marginBottom="8dp" />
 
+
     <!-- EditText for entering new task -->
     <EditText
         android:id="@+id/newTaskText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autofillHints="taskName"
         android:background="@drawable/edit_text_background"
         android:inputType="textCapSentences"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -46,6 +49,19 @@
         android:layout_alignParentEnd="true"
         android:background="@drawable/logout_button_background"
         android:text="@string/create"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white" />
+    <Button
+        android:id="@+id/cancelTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/prioritySpinner"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/logout_button_background"
+        android:text="@string/cancel"
         android:textSize="16sp"
         android:textAllCaps="false"
         android:textColor="@android:color/white" />

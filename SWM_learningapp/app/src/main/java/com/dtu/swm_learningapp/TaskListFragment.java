@@ -11,10 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.dtu.swm_learningapp.AddTaskDialog;
-import com.dtu.swm_learningapp.R;
-import com.dtu.swm_learningapp.Task;
-import com.dtu.swm_learningapp.TaskAdapter;
+import com.dtu.swm_learningapp.util.TaskAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;

@@ -12,6 +12,7 @@ import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 
+import com.dtu.swm_learningapp.util.TaskAdapter;
 import java.util.ArrayList;
 
 public class AddTaskDialog extends Dialog {
@@ -42,7 +43,12 @@ public class AddTaskDialog extends Dialog {
                 R.array.priority_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         prioritySpinner.setAdapter(adapter);
-
+        findViewById(R.id.cancelTaskButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dismiss();
+            }
+        });
         newTaskButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

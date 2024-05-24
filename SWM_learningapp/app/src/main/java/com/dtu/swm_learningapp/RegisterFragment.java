@@ -1,17 +1,13 @@
 package com.dtu.swm_learningapp;
-
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.dtu.swm_learningapp.databinding.FragmentRegisterFragmentBinding;
 import com.dtu.swm_learningapp.util.UserProfile;
 import com.dtu.swm_learningapp.util.Validation;
@@ -20,10 +16,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.Objects;
-
 
 public class RegisterFragment extends Fragment implements View.OnClickListener, OnCompleteListener<AuthResult> {
 
@@ -147,6 +139,4 @@ public class RegisterFragment extends Fragment implements View.OnClickListener, 
         }
 
     }
-
-
 }
